@@ -1,0 +1,338 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#but {
+    color: white;
+    margin-right: 20px;
+    font-size: 25px;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.SA{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.MF{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+}
+
+.TXTM{
+    color: white;
+    font-size: 100px;
+}
+
+.SA h1{
+    font-weight: 100;
+    font-size: 17px;
+    color: white;
+}
+
+.SA h2{
+    font-weight: 800;
+    font-size: 22px;
+    color: white;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+#logo {
+    margin-left: 40px;
+    height: 64px;
+    width: 58px;
+}
+
+.Header{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#Txt {
+    width: 100%;
+    height: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.T {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: 550px;
+    top: 400px;
+    transform: rotate(180deg);
+    position: absolute;
+    color: rgb(181, 252, 153);
+    font-size: 90px;
+    animation: moveUpDown 6s ease-in-out infinite;
+}
+
+.W {
+    transform: rotate(-90deg);
+    position: absolute;
+    color: white;
+    font-size: 120px;
+    animation: pulse 3s infinite;
+    top: 460px;
+    left: 750px;
+}
+
+.I {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    right: 650px;
+    position: absolute;
+    color: rgb(118, 250, 188);
+    font-size: 80px;
+    animation: moveDownUp 6s linear infinite;
+}
+
+.F {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    top: 460px;
+    left: 390px;
+    position: absolute;
+    color: rgb(246, 255, 116);
+    font-size: 90px;
+    font-weight: 900;
+    animation: moveLeftRight 6s linear infinite;
+}
+
+.JDiv button{
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgb(250, 250, 174);
+    right: 400px;
+    animation: moveDownUp1 6s linear infinite;
+}
+
+.T:hover {
+    left: 600px;
+}
+
+.W:hover {
+    transform: rotate(-90deg) skew(20deg);
+}
+
+.I:hover {
+    color: rgb(60, 122, 93);
+}
+
+#card-div {
+    position: absolute;
+    top: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-row {
+    display: flex;
+  }
+
+  .card {
+    position: relative;
+    height: 540px;
+    width: 360px;
+    margin: 10px;
+    border-radius: 10px;
+
+  }
+
+  .card-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .card-front, img{
+    transform: rotateY(0deg);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card-back {
+    color: whitesmoke;
+    padding: 1rem;
+    background-color: rgb(77, 77, 107);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .card-flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+.BUTTN{
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    width: 300px;
+    background-color: rgb(255, 255, 182);
+    font-size: 23px;   
+    font-weight: 600;
+}
+
+#jokeSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes pulse {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: #727272;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        top: 400;
+    }
+
+    50% {
+        top: 300px;
+    }
+
+    60%,
+    90% {
+        top: 300;
+    }
+}
+
+@keyframes moveDownUp {
+    0% {
+        top: 400px;
+    }
+
+    25% {
+        top: 400px;
+    }
+
+    50% {
+        top: 560px;
+    }
+
+    75% {
+        top: 560px;
+    }
+
+    100% {
+        top: 400px;
+    }
+}
+
+@keyframes moveLeftRight {
+
+    0%,
+    20% {
+        left: 300px;
+    }
+
+    25%,
+    45% {
+        left: 300px;
+    }
+
+    50%,
+    70% {
+        left: -700px;
+    }
+
+    75%,
+    95% {
+        left: -700px;
+    }
+
+    100% {
+        left: 300px;
+    }
+}
+
+@keyframes moveDownUp1 {
+    0% {
+        top: -4000px;
+    }
+
+    25% {}
+
+    50% {
+        top: 400px;
+    }
+
+    75% {
+        top: 400px;
+    }
+
+    100% {
+        top: -4000px;
+    }
+}
